@@ -1,0 +1,173 @@
+html,body{
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  color: white;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  background: #040404 url("../../public/assets/image/bg2.jpg") top right no-repeat;
+  background-size: cover;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  z-index: -1;
+}
+
+/* Navbar efek */
+.active-mobile{
+  opacity: 1;
+  color: #18d26e;
+}
+
+.navbar-large ul li a{
+  position: relative;
+}
+
+.navbar-large ul li a::before{
+  content: "";
+  position: absolute;
+  background-color: #18d26e;
+  color: #18d26e;
+  width: 0;
+  height: 3px;
+  left: 0;
+  bottom: -4px;
+  transition: all .3s ease-in-out;
+}
+
+.navbar-large ul li a:hover::before,
+.navbar-large ul li a.active-large::before{
+  width: 100%;
+}
+
+.email-icon,
+.social-icon{
+  position: relative;
+}
+
+.email-icon::after,
+.social-icon::after{
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+/* Card Contact me btn */
+.contact-me-btn {
+  background-color: #63eda3; /* Button background color */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 0 #4dac81, 0 6px 10px rgba(0, 0, 0, 0.5); /* 3D effect */
+}
+
+.contact-me-btn:active {
+  box-shadow: 0 2px 0 #4dac81, 0 2px 5px rgba(0, 0, 0, 0.5); /* Pressed effect */
+  transform: translateY(4px); /* Moves button down */
+}
+
+.contact-me-btn:hover {
+  background-color: #54c78a; /* Slightly darker shade on hover */
+  transform: translateY(4px); /* Moves button down */
+  box-shadow: 0 2px 0 #4dac81, 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Card efek service */
+.service-card{
+  position: relative;
+}
+
+.service-card::before{
+  content: "";
+  position: absolute;
+  width: 0; /* Diameter of the semicircle */
+  height: 0; /* Diameter of the semicircle */
+  background-color: #18d26e;
+  opacity: .5; /* Color of the semicircle */
+  border-radius: 100px ;
+  z-index: -1;
+  transition: all 1s ease;
+}
+
+.service-card:hover::before{
+  height: 100%;
+  width: 100%;
+  border-radius: 0 0 0 0;
+  opacity: 1;
+}
+
+/* Card efek skill */
+.card-skill {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center; /* Center items vertically */
+  transition: all 0.3s ease;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.card-skill .text-content .hidden-text {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card-skill:hover .text-content {
+  transform: translateY(-8px);
+}
+
+.card-skill:hover .text-content .hidden-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Navbar portfolio efek */
+.nav-portfolio-mobile button{
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-portfolio-mobile button:hover{
+  background-color: #18d26e;
+}
+
+.active-filter-port{
+  background-color: #18d26e;
+}
+
+.nav-portfolio-desk button {
+  padding-bottom: 5px;
+  transition: padding-bottom 0.3s ease-in-out;
+}
+
+.active-filter-port-desk{
+  border-bottom: 3px solid #18d26e;
+  padding-bottom: 5px;
+  transition: border-bottom 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+}
+
+/* Tambahkan gaya yang membedakan jika diperlukan */
+.nav-portfolio-desk button:not(.active-filter-port-desk):hover {
+  padding-bottom: 5px;
+  transition: padding-bottom 0.3s ease-in-out;
+}
+

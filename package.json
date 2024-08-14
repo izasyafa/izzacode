@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.7"
+  },
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch"
+  },
+  "dependencies": {
+    "glightbox": "^3.3.0",
+    "isotope-layout": "^3.0.6"
+  }
+}
