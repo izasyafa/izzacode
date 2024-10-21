@@ -6,6 +6,7 @@
     "dev": "npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "glightbox": "^3.3.0",
     "isotope-layout": "^3.0.6"
   }

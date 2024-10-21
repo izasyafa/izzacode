@@ -10,6 +10,8 @@
     <!-- TAILWIND CSS -->
     <link href="./src/css/output.css" rel="stylesheet" />
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- FONT AWESOME -->
     <link
       rel="stylesheet"
@@ -54,7 +56,7 @@
       class="navbar fixed right-0 left-0 px-4 py-9 sm:px-10 md:px-14 lg:px-32 z-20 bg-hitam-custom bg-opacity-50 transition-colors duration-300"
       x-data="{ open: false, scrolled: false }"
       x-init="window.addEventListener('scroll', () => { scrolled = window.scrollY > 50 })"
-      :class="{ 'bg-transparent': !scrolled, 'bg-hitam-custom bg-opacity-80': scrolled }" 
+      :class="{ 'bg-transparent': !scrolled, 'bg-hitam-custom bg-opacity-80': scrolled }"
     >
       <div class="flex justify-between items-center">
         <h1 class="text-2xl font-bold tracking-wider 2xl:text-4xl">IzzaCode</h1>
@@ -62,7 +64,7 @@
           <i x-show="!open" class="fas fa-bars fa-lg"></i>
           <i x-show="open" class="fas fa-times fa-lg"></i>
         </button>
-        <div class="navbar-large hidden lg:block 2xl:text-xl ">
+        <div class="navbar-large hidden lg:block 2xl:text-xl">
           <ul class="flex gap-6 2xl:gap-10">
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -86,7 +88,8 @@
           <li class="flex-1">
             <a
               href="#home"
-              class="flex flex-col justify-center items-center gap-1 active-mobile" data-section="home"
+              class="flex flex-col justify-center items-center gap-1 active-mobile"
+              data-section="home"
             >
               <i class="fa-solid fa-house"></i>
               <span class="text-xs font-bold">Home</span>
@@ -95,7 +98,8 @@
           <li class="flex-1">
             <a
               href="#about"
-              class="flex flex-col justify-center items-center gap-1" data-section="about"
+              class="flex flex-col justify-center items-center gap-1"
+              data-section="about"
             >
               <i class="fa-solid fa-user"></i>
               <span class="text-xs font-bold">About</span>
@@ -104,7 +108,8 @@
           <li class="flex-1">
             <a
               href="#service"
-              class="flex flex-col justify-center items-center gap-1 opacity-50" data-section="service"
+              class="flex flex-col justify-center items-center gap-1 opacity-50"
+              data-section="service"
             >
               <i class="fa-solid fa-wrench"></i>
               <span class="text-xs font-bold">Services</span>
@@ -113,7 +118,8 @@
           <li class="flex-1">
             <a
               href="#portfolio"
-              class="flex flex-col justify-center items-center gap-1" data-section="portfolio"
+              class="flex flex-col justify-center items-center gap-1"
+              data-section="portfolio"
             >
               <i class="fa-solid fa-desktop"></i>
               <span class="text-xs font-bold">Portfolio</span>
@@ -122,7 +128,8 @@
           <li class="flex-1">
             <a
               href="#contact"
-              class="flex flex-col justify-center items-center gap-1" data-section="contact"
+              class="flex flex-col justify-center items-center gap-1"
+              data-section="contact"
             >
               <i class="fa-solid fa-phone"></i>
               <span class="text-xs font-bold">Contact</span>
@@ -140,26 +147,30 @@
           class="flex flex-col justify-center lg:flex-row lg:justify-between lg:items-center 2xl:mx-28"
         >
           <div class="text-center 2xl:h-full 2xl:text-left">
-            <p class="lg:text-2xl 2xl:text-3xl">Hello, i'm</p>
-            <h1 class="text-3xl font-bold lg:text-5xl 2xl:text-7xl">
+            <p class="lg:text-2xl 2xl:text-3xl" data-aos="fade-right" data-aos-duration="1200">Hello, i'm</p>
+            <h1 class="text-3xl font-bold lg:text-5xl 2xl:text-7xl" data-aos="fade-right" data-aos-duration="1000">
               Izza Assyafa
             </h1>
-            <p class="animated-text lg:my-3">
+            <p class="animated-text lg:my-3" data-aos="fade-right" data-aos-duration="800">
               <span class="font-sans lg:text-3xl" id="animatedText"></span>
             </p>
-            <a
-              href="#contact" class="contact-me-btn px-4 py-2 my-6 rounded-md font-semibold bg-button-green w-fit mx-auto hidden lg:block 2xl:text-2xl 2xl:my-10"
+            <a data-aos="fade-up" data-aos-duration="800"
+              href="#contact"
+              class="contact-me-btn px-4 py-2 my-6 rounded-md font-semibold bg-button-green w-fit mx-auto hidden lg:block 2xl:text-2xl 2xl:my-10"
             >
               Contact Me
             </a>
           </div>
           <img
+            data-aos="flip-left"
+            data-aos-duration="1500"
             src="./public/assets/image/pp.png"
             alt="Izza Assyafa Profile Picture"
             class="max-w-full max-h-pp object-contain 2xl:min-h-pp-large"
           />
-          <a
-            class="contact-me-btn px-4 py-2 rounded-md font-semibold bg-button-green w-fit mx-auto lg:hidden" href="#contact"
+          <a data-aos="fade-up" data-aos-duration="1200"
+            class="contact-me-btn px-4 py-2 rounded-md font-semibold bg-button-green w-fit mx-auto lg:hidden"
+            href="#contact"
           >
             Contact Me
           </a>
@@ -169,19 +180,19 @@
 
     <!-- ABUOT SECTION -->
     <section id="about" class="pt-28 px-4 sm:px-10 md:px-14 lg:px-32">
-      <div class="bg-abu-abu bg-opacity-70 p-6 rounded-2xl 2xl:p-10">
+      <div class="bg-abu-abu bg-opacity-70 p-6 rounded-2xl 2xl:p-10" data-aos="fade-up" data-aos-duration="1500">
         <div
           class="flex justify-center items-center lg:justify-start lg:flex-col lg:items-start"
         >
           <div class="flex items-center">
-            <h1 class="text-xl font-semibold tracking-widest hidden lg:block">
+            <h1 class="text-xl font-semibold tracking-widest hidden lg:block" data-aos="fade-right" data-aos-duration="1800">
               ABOUT
             </h1>
-            <div
+            <div data-aos="fade-right" data-aos-duration="1800"
               class="h-0.5 bg-white w-20 ml-2 rounded-xl hidden lg:block"
             ></div>
           </div>
-          <h1 class="text-2xl font-bold tracking-wider 2xl:text-4xl">
+          <h1 class="text-2xl font-bold tracking-wider 2xl:text-4xl" data-aos="fade-right" data-aos-duration="1800">
             ABOUT ME
           </h1>
         </div>
@@ -189,7 +200,7 @@
           class="mt-9 flex flex-col justify-center lg:flex-row lg:justify-between lg:items-center xl:px-16 2xl:px-32"
         >
           <div class="pt-3 mb-10 lg:mb-0">
-            <img
+            <img data-aos="fade-up" data-aos-duration="1200"
               src="./public/assets/image/pp-about.JPG"
               alt="Izza Assyafa Picture"
               class="rounded-full max-w-full max-h-full mx-auto lg:max-h-80 lg:min-w-full 2xl:min-h-full 2xl:w-auto"
@@ -198,7 +209,7 @@
           <div
             class="text-justify lg:ml-10 lg:w-desc-text 2xl:min-w-desc-about"
           >
-            <p class="2xl:text-xl">
+            <p class="2xl:text-xl" data-aos="fade-up" data-aos-duration="1200">
               <span class="pl-8">I</span> am a student pursuing a bachelor's
               degree in Information Systems at Dian Nuswantoro University. With
               a strong passion and full dedication to technology, I possess
@@ -219,8 +230,8 @@
       <div class="mt-10 rounded-lg md:px-9">
         <!-- Title Skill -->
         <div class="flex items-center ml-4 my-4">
-          <h1 class="text-xl font-semibold tracking-widest">SKILL</h1>
-          <div class="h-0.5 bg-white w-20 rounded-xl ml-3"></div>
+          <h1 class="text-xl font-semibold tracking-widest" data-aos="fade-right" data-aos-duration="1800">SKILLS</h1>
+          <div class="h-0.5 bg-white w-20 rounded-xl ml-3" data-aos="fade-right" data-aos-duration="1800"></div>
         </div>
 
         <!-- Detail Skill -->
@@ -228,7 +239,7 @@
           class="flex flex-wrap justify-between 2xl:grid-flow-row gap-7 2xl:gap-10"
         >
           <div
-            class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 sm:w-40 md:w-52 py-3 2xl:py-5 flex flex-grow 2xl:min-w-72 items-center 2xl:px-6 rounded-md"
+            data-aos="fade-up" data-aos-duration="1200" class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 sm:w-40 md:w-52 py-3 2xl:py-5 flex flex-grow 2xl:min-w-72 items-center 2xl:px-6 rounded-md"
           >
             <img
               src="./public/assets/icon/html.svg"
@@ -243,7 +254,7 @@
             </div>
           </div>
           <div
-            class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 sm:w-40 md:w-52 py-3 2xl:py-5 flex flex-grow 2xl:min-w-72 items-center 2xl:px-6 rounded-md"
+            data-aos="fade-up" data-aos-duration="1200" class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 sm:w-40 md:w-52 py-3 2xl:py-5 flex flex-grow 2xl:min-w-72 items-center 2xl:px-6 rounded-md"
           >
             <img
               src="./public/assets/icon/css-3.svg"
@@ -258,7 +269,7 @@
             </div>
           </div>
           <div
-            class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 sm:w-40 md:w-52 py-3 2xl:py-5 flex flex-grow 2xl:min-w-72 items-center 2xl:px-6 rounded-md"
+            data-aos="fade-up" data-aos-duration="1200" class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 sm:w-40 md:w-52 py-3 2xl:py-5 flex flex-grow 2xl:min-w-72 items-center 2xl:px-6 rounded-md"
           >
             <img
               src="./public/assets/icon/js.svg"
@@ -273,7 +284,7 @@
             </div>
           </div>
           <div
-            class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 sm:w-40 md:w-52 py-3 2xl:py-5 flex flex-grow 2xl:min-w-72 items-center 2xl:px-6 rounded-md"
+            data-aos="fade-up" data-aos-duration="1200" class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 sm:w-40 md:w-52 py-3 2xl:py-5 flex flex-grow 2xl:min-w-72 items-center 2xl:px-6 rounded-md"
           >
             <img
               src="./public/assets/icon/php.svg"
@@ -288,7 +299,7 @@
             </div>
           </div>
           <div
-            class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 sm:w-40 md:w-52 py-3 2xl:py-5 flex flex-grow 2xl:min-w-72 items-center 2xl:px-6 rounded-md"
+            data-aos="fade-up" data-aos-duration="1200" class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 sm:w-40 md:w-52 py-3 2xl:py-5 flex flex-grow 2xl:min-w-72 items-center 2xl:px-6 rounded-md"
           >
             <img
               src="./public/assets/icon/media.svg"
@@ -303,7 +314,7 @@
             </div>
           </div>
           <div
-            class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 sm:w-40 md:w-52 py-3 2xl:py-5 flex flex-grow 2xl:min-w-72 items-center 2xl:px-6 rounded-md"
+            data-aos="fade-up" data-aos-duration="1200" class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 sm:w-40 md:w-52 py-3 2xl:py-5 flex flex-grow 2xl:min-w-72 items-center 2xl:px-6 rounded-md"
           >
             <img
               src="./public/assets/icon/icons8-tailwindcss-96.svg"
@@ -318,7 +329,7 @@
             </div>
           </div>
           <div
-            class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 sm:w-40 md:w-52 py-3 2xl:py-5 flex flex-grow 2xl:min-w-72 items-center 2xl:px-6 rounded-md"
+            data-aos="fade-up" data-aos-duration="1200" class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 sm:w-40 md:w-52 py-3 2xl:py-5 flex flex-grow 2xl:min-w-72 items-center 2xl:px-6 rounded-md"
           >
             <img
               src="./public/assets/icon/icons8-laravel-96.svg"
@@ -333,7 +344,7 @@
             </div>
           </div>
           <div
-            class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 sm:w-40 md:w-52 py-3 2xl:py-5 flex flex-grow 2xl:min-w-72 items-center 2xl:px-6 rounded-md"
+            data-aos="fade-up" data-aos-duration="1200" class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 sm:w-40 md:w-52 py-3 2xl:py-5 flex flex-grow 2xl:min-w-72 items-center 2xl:px-6 rounded-md"
           >
             <img
               src="./public/assets/icon/icons8-vue-js-96.svg"
@@ -348,7 +359,7 @@
             </div>
           </div>
           <div
-            class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 sm:w-40 md:w-52 py-3 2xl:py-5 flex flex-grow 2xl:min-w-72 items-center 2xl:px-6 rounded-md"
+            data-aos="fade-up" data-aos-duration="1200" class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 sm:w-40 md:w-52 py-3 2xl:py-5 flex flex-grow 2xl:min-w-72 items-center 2xl:px-6 rounded-md"
           >
             <img
               src="./public/assets/icon/icons8-mysql-96.svg"
@@ -363,7 +374,7 @@
             </div>
           </div>
           <div
-            class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 sm:w-40 md:w-52 py-3 2xl:py-5 flex flex-grow 2xl:min-w-72 items-center 2xl:px-6 rounded-md"
+            data-aos="fade-up" data-aos-duration="1200" class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 sm:w-40 md:w-52 py-3 2xl:py-5 flex flex-grow 2xl:min-w-72 items-center 2xl:px-6 rounded-md"
           >
             <img
               src="./public/assets/icon/icons8-google-appsheet-96.svg"
@@ -378,7 +389,7 @@
             </div>
           </div>
           <div
-            class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 sm:w-40 md:w-52 py-3 2xl:py-5 flex flex-grow 2xl:min-w-72 items-center 2xl:px-6 rounded-md"
+            data-aos="fade-up" data-aos-duration="1200" class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 sm:w-40 md:w-52 py-3 2xl:py-5 flex flex-grow 2xl:min-w-72 items-center 2xl:px-6 rounded-md"
           >
             <img
               src="./public/assets/icon/icons8-google-looker-96.svg"
@@ -393,7 +404,7 @@
             </div>
           </div>
           <div
-            class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 sm:w-40 md:w-52 py-3 2xl:py-5 flex flex-grow 2xl:min-w-72 items-center 2xl:px-6 rounded-md"
+            data-aos="fade-up" data-aos-duration="1200" class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 sm:w-40 md:w-52 py-3 2xl:py-5 flex flex-grow 2xl:min-w-72 items-center 2xl:px-6 rounded-md"
           >
             <img
               src="./public/assets/icon/icons8-figma-96.svg"
@@ -408,7 +419,7 @@
             </div>
           </div>
           <div
-            class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 sm:w-40 md:w-52  flex-grow py-3 flex items-center 2xl:px-6 rounded-md"
+            data-aos="fade-up" data-aos-duration="1200" class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 sm:w-40 md:w-52 flex-grow py-3 flex items-center 2xl:px-6 rounded-md"
           >
             <img
               src="./public/assets/icon/icons8-google-sheets-96.svg"
@@ -423,7 +434,7 @@
             </div>
           </div>
           <div
-            class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 sm:w-40 md:w-52 flex-grow py-3 flex items-center 2xl:px-6 rounded-md"
+            data-aos="fade-up" data-aos-duration="1200" class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 sm:w-40 md:w-52 flex-grow py-3 flex items-center 2xl:px-6 rounded-md"
           >
             <img
               src="./public/assets/icon/icons8-python.svg"
@@ -437,7 +448,7 @@
             </div>
           </div>
           <div
-            class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 max-w-47-5% sm:w-40 md:w-52 py-3 2xl:py-5 flex-grow 2xl:min-w-72 flex items-center 2xl:px-6 rounded-md"
+            data-aos="fade-up" data-aos-duration="1200" class="card-skill bg-abu-abu hover:bg-opacity-70 hover:bg-button-green w-32 max-w-47-5% sm:w-40 md:w-52 py-3 2xl:py-5 flex-grow 2xl:min-w-72 flex items-center 2xl:px-6 rounded-md"
           >
             <img
               src="./public/assets/icon/icons8-tableau-software.svg"
@@ -463,19 +474,17 @@
       <div>
         <div class="service-title">
           <div class="flex items-center">
-            <h4 class="text-md tracking-widest 2xl:text-xl">SERVICES</h4>
-            <div class="h-0.5 bg-white w-20 rounded-xl ml-3"></div>
+            <h4 class="text-md tracking-widest 2xl:text-xl" data-aos="fade-right" data-aos-duration="1800">SERVICES</h4>
+            <div class="h-0.5 bg-white w-20 rounded-xl ml-3" data-aos="fade-right" data-aos-duration="1800"></div>
           </div>
-          <h1 class="text-2xl 2xl:text-4xl font-bold tracking-wider">
+          <h1 class="text-2xl 2xl:text-4xl font-bold tracking-wider" data-aos="fade-right" data-aos-duration="1800">
             MY SERVICE
           </h1>
         </div>
       </div>
 
-      <div
-        class="mt-9 2xl:mt-32 flex flex-col gap-6 lg:flex-row 2xl:gap-20"
-      >
-        <div
+      <div class="mt-9 2xl:mt-32 flex flex-col gap-6 lg:flex-row 2xl:gap-20">
+        <div data-aos="fade-left" data-aos-duration="1200"
           class="service-card bg-abu-abu flex flex-col justify-center items-center min-h-64 lg:flex-1 2xl:min-h-96"
         >
           <i class="fi fi-tr-site-browser text-6xl 2xl:text-8xl"></i>
@@ -487,17 +496,19 @@
             front-end aesthetics and back-end functionality.
           </p>
         </div>
-        <div
+        <div data-aos="fade-right" data-aos-duration="1200"
           class="service-card bg-abu-abu flex flex-col justify-center items-center min-h-64 lg:flex-1 2xl:min-h-96"
         >
           <i class="fi fi-ts-ux-browser text-6xl 2xl:text-8xl"></i>
-          <h3 class="text-center text-2xl font-bold 2xl:text-4xl 2xl:px-9">UI/UX Design</h3>
+          <h3 class="text-center text-2xl font-bold 2xl:text-4xl 2xl:px-9">
+            UI/UX Design
+          </h3>
           <p class="text-center text-xs px-4 py-2 2xl:text-lg">
             Designing intuitive and engaging user interfaces that enhance user
             experience and drive interaction.
           </p>
         </div>
-        <div
+        <div data-aos="fade-left" data-aos-duration="1200"
           class="service-card bg-abu-abu flex flex-col justify-center items-center min-h-64 lg:flex-1 2xl:min-h-96"
         >
           <i class="fi fi-rr-stats text-6xl 2xl:text-8xl"></i>
@@ -515,218 +526,430 @@
 
     <!-- PORTFOLIO SECTION -->
     <section id="portfolio" class="pt-28 px-4 sm:px-10 md:px-14 lg:px-32">
-        <div class="flex items-center">
-          <h4 class="text-md tracking-widest 2xl:text-xl">PORTFOLIO</h4>
-          <div class="h-0.5 bg-white w-20 rounded-xl ml-3"></div>
-        </div>
-        <div class="navbar-portfolio">
-          <div class="flex justify-between items-end">
-            <h1 class="text-2xl font-bold tracking-wider 2xl:text-4xl">MY RECENT WORK</h1>
-            <div class="nav-portfolio-desk relative lg:flex gap-6 hidden 2xl:gap-10" id="portfolio-filters-desk">
-              <button data-filter="*" class="2xl:text-xl">All Projects</button>
-              <button data-filter=".filter-app" class="2xl:text-xl">Web Development</button>
-              <button data-filter=".filter-ui" class="2xl:text-xl">UI/UX Design</button>
-              <button data-filter=".filter-data" class="2xl:text-xl">Data Analyst</button>
-            </div>
-          </div>
-
-          <div class="nav-portfolio-mobile w-full flex gap-2 my-6 lg:hidden" id="portfolio-filters">
-            <button class="w-full text-center min-w-16 py-1 rounded-lg" data-filter="*">
-              All
+      <div class="flex items-center">
+        <h4 class="text-md tracking-widest 2xl:text-xl" data-aos="fade-right" data-aos-duration="1800">PORTFOLIO</h4>
+        <div class="h-0.5 bg-white w-20 rounded-xl ml-3" data-aos="fade-right" data-aos-duration="1800"></div>
+      </div>
+      <div class="navbar-portfolio">
+        <div class="flex justify-between items-end">
+          <h1 class="text-2xl font-bold tracking-wider 2xl:text-4xl" data-aos="fade-left" data-aos-duration="1800">
+            MY RECENT WORK
+          </h1>
+          <div
+            class="nav-portfolio-desk relative lg:flex gap-6 hidden 2xl:gap-10"
+            id="portfolio-filters-desk"
+          >
+            <button data-filter="*" class="2xl:text-xl" data-aos="fade-up" data-aos-duration="600">All Projects</button>
+            <button data-filter=".filter-app" class="2xl:text-xl" data-aos="fade-up" data-aos-duration="800">
+              Web Development
             </button>
-            <button class="w-full text-center min-w-16 py-1 rounded-lg" data-filter=".filter-app">
-              Web
+            <button data-filter=".filter-ui" class="2xl:text-xl" data-aos="fade-up" data-aos-duration="1000">
+              UI/UX Design
             </button>
-            <button class="w-full text-center min-w-16 py-1 rounded-lg" data-filter=".filter-ui">
-              UI/UX
-            </button>
-            <button class="w-full text-center min-w-16 py-1 rounded-lg" data-filter=".filter-data">
-              Data
+            <button data-filter=".filter-data" class="2xl:text-xl" data-aos="fade-up" data-aos-duration="1200">
+              Data Analyst
             </button>
           </div>
         </div>
 
-      <div class="flex flex-wrap mt-10 justify-between portfolio-container" id="itemList">
+        <div
+          class="nav-portfolio-mobile w-full flex gap-2 my-6 lg:hidden"
+          id="portfolio-filters"
+        >
+          <button
+            class="w-full text-center min-w-16 py-1 rounded-lg"
+            data-filter="*" data-aos="fade-up" data-aos-duration="600"
+          >
+            All
+          </button>
+          <button
+            class="w-full text-center min-w-16 py-1 rounded-lg"
+            data-filter=".filter-app" data-aos="fade-up" data-aos-duration="800"
+          >
+            Web
+          </button>
+          <button
+            class="w-full text-center min-w-16 py-1 rounded-lg"
+            data-filter=".filter-ui" data-aos="fade-up" data-aos-duration="1000"
+          >
+            UI/UX
+          </button>
+          <button
+            class="w-full text-center min-w-16 py-1 rounded-lg"
+            data-filter=".filter-data" data-aos="fade-up" data-aos-duration="1200"
+          >
+            Data
+          </button>
+        </div>
+      </div>
 
-        <div class="flex-grow 2xl:min-h-72 w-full md:w-1/2 lg:w-1/3 p-4 xl:p-1 2xl:p-4 xl:flex-1 portfolio-item filter-app">
-          <div class="relative flex justify-center bg-abu-abu-2 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <img src="./public/assets/image/lightbox/Web-dsinta.png" class=" max-h-44 min-h-40 lg:min-h-44 2xl:min-h-72" alt="">
-            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white">
+      <div
+        class="flex flex-wrap mt-10 justify-between portfolio-container"
+        id="itemList"
+      >
+        <div
+          data-aos="fade-up" data-aos-duration="1200" class="flex-grow 2xl:min-h-72 w-full md:w-1/2 lg:w-1/3 p-4 xl:p-1 2xl:p-4 xl:flex-1 portfolio-item filter-app"
+        >
+          <div
+            class="relative flex justify-center bg-abu-abu-2 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <img
+              src="./public/assets/image/lightbox/Web-dsinta.png"
+              class="max-h-44 min-h-40 lg:min-h-44 2xl:min-h-72"
+              alt=""
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white"
+            >
               <h4 class="text-lg font-semibold mb-2">Dsinta</h4>
               <p class="text-sm mb-4">Website</p>
               <div class="">
-                <a href="./public/assets/image/lightbox/Web-dsinta.png" data-gallery="portfolioGallery" class="glightbox portfolio-lightbox" data-height="600px" title=""><i class="fa-solid fa-plus" style="color: #ffffff"></i></a>
+                <a
+                  href="./public/assets/image/lightbox/Web-dsinta.png"
+                  data-gallery="portfolioGallery"
+                  class="glightbox portfolio-lightbox"
+                  title=""
+                  ><i class="fa-solid fa-plus" style="color: #ffffff"></i
+                ></a>
               </div>
             </div>
           </div>
         </div>
-        
-        <div class="flex-grow 2xl:min-h-72 w-full md:w-1/2 lg:w-1/3 p-4 xl:p-1 2xl:p-4 xl:flex-1 portfolio-item filter-app">
-          <div class="relative flex justify-center bg-abu-abu-2 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <img src="./public/assets/image/lightbox/Web-Ecomm.png" class="max-h-44 min-h-40 lg:min-h-44 2xl:min-h-72" alt="">
-            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white">
+
+        <div
+          data-aos="fade-up" data-aos-duration="1200" class="flex-grow 2xl:min-h-72 w-full md:w-1/2 lg:w-1/3 p-4 xl:p-1 2xl:p-4 xl:flex-1 portfolio-item filter-app"
+        >
+          <div
+            class="relative flex justify-center bg-abu-abu-2 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <img
+              src="./public/assets/image/lightbox/Web-Ecomm.png"
+              class="max-h-44 min-h-40 lg:min-h-44 2xl:min-h-72"
+              alt=""
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white"
+            >
               <h4 class="text-lg font-semibold mb-2">Ono Sport</h4>
               <p class="text-sm mb-4">Website</p>
               <div class="">
-                <a href="./public/assets/image/lightbox/Web-Ecomm.png" data-gallery="portfolioGallery" class="glightbox portfolio-lightbox" data-height="600px" title=""><i class="fa-solid fa-plus" style="color: #ffffff"></i></a>
+                <a
+                  href="./public/assets/image/lightbox/Web-Ecomm.png"
+                  data-gallery="portfolioGallery"
+                  class="glightbox portfolio-lightbox"
+                  title=""
+                  ><i class="fa-solid fa-plus" style="color: #ffffff"></i
+                ></a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="flex-grow 2xl:min-h-72 w-full md:w-1/2 lg:w-1/3 p-4 xl:p-1 2xl:p-4 xl:flex-1 portfolio-item filter-ui">
-          <div class="relative flex justify-center bg-abu-abu-2 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <img src="./public/assets/image/lightbox/UI-JI.png" class="max-h-44 min-h-40 lg:min-h-44 2xl:min-h-72" alt="">
-            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white">
+        <div
+          data-aos="fade-up" data-aos-duration="1200" class="flex-grow 2xl:min-h-72 w-full md:w-1/2 lg:w-1/3 p-4 xl:p-1 2xl:p-4 xl:flex-1 portfolio-item filter-ui"
+        >
+          <div
+            class="relative flex justify-center bg-abu-abu-2 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <img
+              src="./public/assets/image/lightbox/UI-JI.png"
+              class="max-h-44 min-h-40 lg:min-h-44 2xl:min-h-72"
+              alt=""
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white"
+            >
               <h4 class="text-lg font-semibold mb-2">POS Jawa Indah</h4>
               <p class="text-sm mb-4">UI/UX Design</p>
               <div class="">
-                <a href="./public/assets/image/lightbox/UI-JI.png" data-gallery="portfolioGallery" class="glightbox portfolio-lightbox" data-height="600px" title=""><i class="fa-solid fa-plus" style="color: #ffffff"></i></a>
+                <a
+                  href="./public/assets/image/lightbox/UI-JI.png"
+                  data-gallery="portfolioGallery"
+                  class="glightbox portfolio-lightbox"
+                  title=""
+                  ><i class="fa-solid fa-plus" style="color: #ffffff"></i
+                ></a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="flex-grow 2xl:min-h-72 w-full md:w-1/2 lg:w-1/3 p-4 xl:p-1 2xl:p-4 xl:flex-1 portfolio-item filter-ui">
-          <div class="relative flex justify-center bg-abu-abu-2 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <img src="./public/assets/image/lightbox/UI-Laundry.png" class=" max-h-44 min-h-40 lg:min-h-44 2xl:min-h-72" alt="">
-            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white">
+        <div
+          data-aos="fade-up" data-aos-duration="1200" class="flex-grow 2xl:min-h-72 w-full md:w-1/2 lg:w-1/3 p-4 xl:p-1 2xl:p-4 xl:flex-1 portfolio-item filter-ui"
+        >
+          <div
+            class="relative flex justify-center bg-abu-abu-2 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <img
+              src="./public/assets/image/lightbox/UI-Laundry.png"
+              class="max-h-44 min-h-40 lg:min-h-44 2xl:min-h-72"
+              alt=""
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white"
+            >
               <h4 class="text-lg font-semibold mb-2">Doctor Laundry</h4>
               <p class="text-sm mb-4">UI/UX Design</p>
               <div class="">
-                <a href="./public/assets/image/lightbox/UI-Laundry.png" data-gallery="portfolioGallery" class="glightbox portfolio-lightbox" data-height="600px" title=""><i class="fa-solid fa-plus" style="color: #ffffff"></i></a>
+                <a
+                  href="./public/assets/image/lightbox/UI-Laundry.png"
+                  data-gallery="portfolioGallery"
+                  class="glightbox portfolio-lightbox"
+                  title=""
+                  ><i class="fa-solid fa-plus" style="color: #ffffff"></i
+                ></a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="flex-grow 2xl:min-h-72 w-full md:w-1/2 lg:w-1/3 p-4 xl:p-1 2xl:p-4 xl:flex-1 portfolio-item filter-ui">
-          <div class="relative flex justify-center bg-abu-abu-2 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <img src="./public/assets/image/lightbox/UI_Resto.png" class=" max-h-44 min-h-40 lg:min-h-44 2xl:min-h-72" alt="">
-            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white">
+        <div
+          data-aos="fade-up" data-aos-duration="1200" class="flex-grow 2xl:min-h-72 w-full md:w-1/2 lg:w-1/3 p-4 xl:p-1 2xl:p-4 xl:flex-1 portfolio-item filter-ui"
+        >
+          <div
+            class="relative flex justify-center bg-abu-abu-2 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <img
+              src="./public/assets/image/lightbox/UI_Resto.png"
+              class="max-h-44 min-h-40 lg:min-h-44 2xl:min-h-72"
+              alt=""
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white"
+            >
               <h4 class="text-lg font-semibold mb-2">Moca Cafe</h4>
               <p class="text-sm mb-4">UI/UX Design</p>
               <div class="">
-                <a href="./public/assets/image/lightbox/UI_Resto.png" data-gallery="portfolioGallery" class="glightbox portfolio-lightbox" data-height="600px" title=""><i class="fa-solid fa-plus" style="color: #ffffff"></i></a>
+                <a
+                  href="./public/assets/image/lightbox/UI_Resto.png"
+                  data-gallery="portfolioGallery"
+                  class="glightbox portfolio-lightbox"
+                  title=""
+                  ><i class="fa-solid fa-plus" style="color: #ffffff"></i
+                ></a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="flex-grow 2xl:min-h-72 w-full md:w-1/2 lg:w-1/3 p-4 xl:p-1 2xl:p-4 xl:flex-1 portfolio-item filter-data">
-          <div class="relative flex justify-center bg-abu-abu-2 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <img src="./public/assets/image/lightbox/Data-P2H.png" class=" max-h-44 min-h-40 lg:min-h-44 2xl:min-h-72" alt="">
-            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white">
+        <div
+          data-aos="fade-up" data-aos-duration="1200" class="flex-grow 2xl:min-h-72 w-full md:w-1/2 lg:w-1/3 p-4 xl:p-1 2xl:p-4 xl:flex-1 portfolio-item filter-data"
+        >
+          <div
+            class="relative flex justify-center bg-abu-abu-2 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <img
+              src="./public/assets/image/lightbox/Data-P2H.png"
+              class="max-h-44 min-h-40 lg:min-h-44 2xl:min-h-72"
+              alt=""
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white"
+            >
               <h4 class="text-lg font-semibold mb-2">P2H Dashboard</h4>
               <p class="text-sm mb-4">Data Dashboard</p>
               <div class="">
-                <a href="./public/assets/image/lightbox/Data-P2H.png" data-gallery="portfolioGallery" class="glightbox portfolio-lightbox" data-height="600px" title=""><i class="fa-solid fa-plus" style="color: #ffffff"></i></a>
+                <a
+                  href="./public/assets/image/lightbox/Data-P2H.png"
+                  data-gallery="portfolioGallery"
+                  class="glightbox portfolio-lightbox"
+                  title=""
+                  ><i class="fa-solid fa-plus" style="color: #ffffff"></i
+                ></a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="flex-grow 2xl:min-h-72 w-full md:w-1/2 lg:w-1/3 p-4 xl:p-1 2xl:p-4 xl:flex-1 portfolio-item filter-data">
-          <div class="relative flex justify-center bg-abu-abu-2 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <img src="./public/assets/image/lightbox/Data-RCI.png" class=" max-h-44 min-h-40 lg:min-h-44 2xl:min-h-72" alt="">
-            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white">
+        <div
+          data-aos="fade-up" data-aos-duration="1200" class="flex-grow 2xl:min-h-72 w-full md:w-1/2 lg:w-1/3 p-4 xl:p-1 2xl:p-4 xl:flex-1 portfolio-item filter-data"
+        >
+          <div
+            class="relative flex justify-center bg-abu-abu-2 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <img
+              src="./public/assets/image/lightbox/Data-RCI.png"
+              class="max-h-44 min-h-40 lg:min-h-44 2xl:min-h-72"
+              alt=""
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white"
+            >
               <h4 class="text-lg font-semibold mb-2">WCI Dashboard</h4>
               <p class="text-sm mb-4">Data Dashboard</p>
               <div class="">
-                <a href="./public/assets/image/lightbox/Data-RCI.png" data-gallery="portfolioGallery" class="glightbox portfolio-lightbox" data-height="600px" title=""><i class="fa-solid fa-plus" style="color: #ffffff"></i></a>
+                <a
+                  href="./public/assets/image/lightbox/Data-RCI.png"
+                  data-gallery="portfolioGallery"
+                  class="glightbox portfolio-lightbox"
+                  title=""
+                  ><i class="fa-solid fa-plus" style="color: #ffffff"></i
+                ></a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="flex-grow 2xl:min-h-72 w-full md:w-1/2 lg:w-1/3 p-4 xl:p-1 2xl:p-4 xl:flex-1 portfolio-item filter-data">
-          <div class="relative flex justify-center bg-abu-abu-2 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <img src="./public/assets/image/lightbox/Data-WCI.png" class=" max-h-44 min-h-40 lg:min-h-44 2xl:min-h-72" alt="">
-            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white">
-              <h4 class="text-lg font-semibold mb-2">Site Performance Dashboard</h4>
+        <div
+          data-aos="fade-up" data-aos-duration="1200" class="flex-grow 2xl:min-h-72 w-full md:w-1/2 lg:w-1/3 p-4 xl:p-1 2xl:p-4 xl:flex-1 portfolio-item filter-data"
+        >
+          <div
+            class="relative flex justify-center bg-abu-abu-2 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <img
+              src="./public/assets/image/lightbox/Data-WCI.png"
+              class="max-h-44 min-h-40 lg:min-h-44 2xl:min-h-72"
+              alt=""
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white"
+            >
+              <h4 class="text-lg font-semibold mb-2">
+                Site Performance Dashboard
+              </h4>
               <p class="text-sm mb-4">Data Dashboard</p>
               <div class="">
-                <a href="./public/assets/image/lightbox/Data-WCI.png" data-gallery="portfolioGallery" class="glightbox portfolio-lightbox" data-height="600px" title=""><i class="fa-solid fa-plus" style="color: #ffffff"></i></a>
+                <a
+                  href="./public/assets/image/lightbox/Data-WCI.png"
+                  data-gallery="portfolioGallery"
+                  class="glightbox portfolio-lightbox"
+                  title=""
+                  ><i class="fa-solid fa-plus" style="color: #ffffff"></i
+                ></a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="flex-grow 2xl:min-h-72 w-full md:w-1/2 lg:w-1/3 p-4 xl:p-1 2xl:p-4 xl:flex-1 portfolio-item filter-data">
-          <div class="relative flex justify-center bg-abu-abu-2 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <img src="./public/assets/image/lightbox/Data-Aplikasi Input Data.png" class=" max-h-44 min-h-40 lg:min-h-44 2xl:min-h-72" alt="">
-            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white">
+        <div
+          data-aos="fade-up" data-aos-duration="1200" class="flex-grow 2xl:min-h-72 w-full md:w-1/2 lg:w-1/3 p-4 xl:p-1 2xl:p-4 xl:flex-1 portfolio-item filter-data"
+        >
+          <div
+            class="relative flex justify-center bg-abu-abu-2 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <img
+              src="./public/assets/image/lightbox/Data-Aplikasi Input Data.png"
+              class="max-h-44 min-h-40 lg:min-h-44 2xl:min-h-72"
+              alt=""
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white"
+            >
               <h4 class="text-lg font-semibold mb-2">P2H App</h4>
               <p class="text-sm mb-4">App Data Input</p>
               <div class="">
-                <a href="./public/assets/image/lightbox/Data-Aplikasi Input Data.png" data-gallery="portfolioGallery" class="glightbox portfolio-lightbox" data-height="600px" title=""><i class="fa-solid fa-plus" style="color: #ffffff"></i></a>
+                <a
+                  href="./public/assets/image/lightbox/Data-Aplikasi Input Data.png"
+                  data-gallery="portfolioGallery"
+                  class="glightbox portfolio-lightbox"
+                  title=""
+                  ><i class="fa-solid fa-plus" style="color: #ffffff"></i
+                ></a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="flex-grow 2xl:min-h-72 w-full md:w-1/2 lg:w-1/3 p-4 xl:p-1 2xl:p-4 xl:flex-1 portfolio-item filter-data">
-          <div class="relative flex justify-center bg-abu-abu-2 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <img src="./public/assets/image/lightbox/Data-Aplikasi_WCI.png" class=" max-h-44 min-h-40 lg:min-h-44 2xl:min-h-72" alt="">
-            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white">
+        <div
+          data-aos="fade-up" data-aos-duration="1200" class="flex-grow 2xl:min-h-72 w-full md:w-1/2 lg:w-1/3 p-4 xl:p-1 2xl:p-4 xl:flex-1 portfolio-item filter-data"
+        >
+          <div
+            class="relative flex justify-center bg-abu-abu-2 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <img
+              src="./public/assets/image/lightbox/Data-Aplikasi_WCI.png"
+              class="max-h-44 min-h-40 lg:min-h-44 2xl:min-h-72"
+              alt=""
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white"
+            >
               <h4 class="text-lg font-semibold mb-2">WCI App</h4>
               <p class="text-sm mb-4">App Data Input</p>
               <div class="">
-                <a href="./public/assets/image/lightbox/Data-Aplikasi_WCI.png" data-gallery="portfolioGallery" class="glightbox portfolio-lightbox" data-height="600px" title=""><i class="fa-solid fa-plus" style="color: #ffffff"></i></a>
+                <a
+                  href="./public/assets/image/lightbox/Data-Aplikasi_WCI.png"
+                  data-gallery="portfolioGallery"
+                  class="glightbox portfolio-lightbox"
+                  title=""
+                  ><i class="fa-solid fa-plus" style="color: #ffffff"></i
+                ></a>
               </div>
             </div>
           </div>
         </div>
-        
-      </div> 
+      </div>
     </section>
 
     <!-- CONTACT SESSION -->
     <section id="contact" class="pt-28 px-4 sm:px-10 md:px-14 lg:px-32">
       <div class="contact-title">
         <div class="flex items-center">
-          <h4 class="text-md tracking-widest 2xl:text-xl">CONTACT</h4>
-          <div class="h-0.5 bg-white w-20 rounded-xl ml-3"></div>
+          <h4 class="text-md tracking-widest 2xl:text-xl" data-aos="fade-right" data-aos-duration="1200">CONTACT</h4>
+          <div class="h-0.5 bg-white w-20 rounded-xl ml-3" data-aos="fade-right" data-aos-duration="1200"></div>
         </div>
-        <h1 class="text-2xl 2xl:text-4xl font-bold tracking-wider">
+        <h1 class="text-2xl 2xl:text-4xl font-bold tracking-wider" data-aos="fade-right" data-aos-duration="1200">
           CONTACT ME
         </h1>
       </div>
 
       <div class="flex flex-wrap mt-2">
         <div class="w-full flex flex-col gap-5 items-stretch mt-4 md:flex-row">
-          <div
+          <div data-aos="fade-up" data-aos-duration="1200"
             class="bg-abu-abu shadow-lg rounded-lg p-2 flex-1 flex items-center"
           >
-            <i class="fa-solid fa-envelope email-icon p-4 mx-2 2xl:p-7 2xl:mx-6 2xl:text-4xl"></i>
+            <i
+              class="fa-solid fa-envelope email-icon p-4 mx-2 2xl:p-7 2xl:mx-6 2xl:text-4xl"
+            ></i>
             <div>
               <h3 class="text-lg font-semibold 2xl:text-2xl">Email Me</h3>
               <p class="text-lg 2xl:text-xl mt-3">arkaassyafa00@gmail.com</p>
             </div>
           </div>
-          <div
+          <div data-aos="fade-up" data-aos-duration="1200"
             class="bg-abu-abu shadow-lg rounded-lg p-2 flex-1 flex items-center"
           >
-            <i class="fa-solid fa-share-nodes social-icon p-4 mx-2 2xl:p-7 2xl:mx-6 2xl:text-4xl"></i>
+            <i
+              class="fa-solid fa-share-nodes social-icon p-4 mx-2 2xl:p-7 2xl:mx-6 2xl:text-4xl"
+            ></i>
             <div>
-              <h3 class="text-lg font-semibold 2xl:text-2xl ">Social Profiles</h3>
+              <h3 class="text-lg font-semibold 2xl:text-2xl">
+                Social Profiles
+              </h3>
               <div class="flex space-x-3 mt-3">
                 <a href="https://instagram.com/izasyafa06" class="text-pink-500"
-                  ><i class="fa-brands fa-instagram text-lg 2xl:text-2xl text-white hover:text-button-green transition-all duration-300 ease-in-out "></i
+                  ><i
+                    class="fa-brands fa-instagram text-lg 2xl:text-2xl text-white hover:text-button-green transition-all duration-300 ease-in-out"
+                  ></i
                 ></a>
-                <a href="https://www.linkedin.com/in/izza-assyafa-40a166223/" class="text-blue-700"
-                  ><i class="fa-brands fa-linkedin text-lg 2xl:text-2xl text-white hover:text-button-green transition-all duration-300 ease-in-out "></i
+                <a
+                  href="https://www.linkedin.com/in/izza-assyafa-40a166223/"
+                  class="text-blue-700"
+                  ><i
+                    class="fa-brands fa-linkedin text-lg 2xl:text-2xl text-white hover:text-button-green transition-all duration-300 ease-in-out"
+                  ></i
                 ></a>
                 <a href="https://github.com/izasyafa" class="text-blue-700"
-                  ><i class="fa-brands fa-github text-lg 2xl:text-2xl text-white hover:text-button-green transition-all duration-300 ease-in-out "></i></a>
+                  ><i
+                    class="fa-brands fa-github text-lg 2xl:text-2xl text-white hover:text-button-green transition-all duration-300 ease-in-out"
+                  ></i
+                ></a>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <form action="https://api.web3forms.com/submit" method="POST" class="mt-4 space-y-4 px-4 py-8 bg-abu-abu rounded-lg">
-        <input type="hidden" name="access_key" value="9cac3b24-ac09-4ad2-b3f3-8e0a0ac6ec39">
+      <form data-aos="fade-up" data-aos-duration="1200"
+        action="https://api.web3forms.com/submit"
+        method="POST"
+        class="mt-4 space-y-4 px-4 py-8 bg-abu-abu rounded-lg"
+      >
+        <input
+          type="hidden"
+          name="access_key"
+          value="9cac3b24-ac09-4ad2-b3f3-8e0a0ac6ec39"
+        />
         <div class="flex flex-wrap -mx-2">
           <div class="w-full md:w-1/2 px-2">
             <input
@@ -799,7 +1022,9 @@
             class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400"
           >
             <li>
-              <a href="#about" class="hover:underline me-4 md:me-6 2xl:text-lg">About</a>
+              <a href="#about" class="hover:underline me-4 md:me-6 2xl:text-lg"
+                >About</a
+              >
             </li>
             <li>
               <a href="#contact" class="hover:underline 2xl:text-lg">Contact</a>
@@ -812,8 +1037,8 @@
         <span
           class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"
           >© 2024
-          <a href="" class="hover:underline">Izza Assyafa</a>.
-          All Rights Reserved.</span
+          <a href="wa.me/6285951476218" class="hover:underline">Izza Assyafa</a
+          >. All Rights Reserved.</span
         >
       </div>
     </footer>
@@ -841,7 +1066,13 @@
       const lightbox = GLightbox({
         touchNavigation: true,
         loop: true,
+        width: "auto", // Menyesuaikan ukuran dengan gambar asli
+        height: "auto",
       });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
     <script src="./src/js/main.js"></script>
   </body>
