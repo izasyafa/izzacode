@@ -7,7 +7,7 @@ html,body{
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("../../public/assets/image/bg2.jpg") top right no-repeat;
+  background-color: #101010;
   background-size: cover;
   left: 0;
   right: 0;
